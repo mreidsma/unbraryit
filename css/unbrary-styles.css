@@ -1,0 +1,39 @@
+html { background: #0065A4;}
+body { background: #fff; font-family: helvetica, arial, verdana, sans-serif; width: 93%;margin:0 auto;}
+header,footer,[role="main"] { padding: .6em;}
+[role="main"] { overflow: auto; padding-bottom: 8em;}
+a { color: #069;}
+h1 { margin-top: .5em;}
+img { max-width: 100%; }
+dl { font-size: 1.2em;}
+dl, footer, p.whoops {margin-top:1.5em;padding-top:1.5em;border-top:1 px solid #bcbcbc;}
+dt, p.whoops {font-weight: bold;font-size:1.3em;}
+dd {padding-left:0;margin:0;}
+input[type="submit"] { display: block; text-align: center; width: 11em; margin: .8em auto;}
+h3 { font-size: .9em;}
+footer { line-height: 1.3em;font-size: .8em; background: #ededed;position: relative;margin-top: -8em; height: 8em;clear:both;}
+.wrap { min-height: 100%;}
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/
+}
+
+@media screen and (min-width: 37.5em) {
+
+h1 { text-align: center;}
+h3 { font-size: 1.3em;}
+.lib-form input[type="text"] { width: 80%; float: left;}
+input[type="submit"] { width: 19%; display: inline-block; float: right; position: relative; bottom: .6em;}
+p.whoops,dl { clear: both; }
+}
+
+@media screen and (min-width:62.5em) {
+[role="main"],header { width: 58em; margin: auto; }
+footer p { text-align: center; }
+
+}
