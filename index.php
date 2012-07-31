@@ -89,7 +89,8 @@ if (isset($_GET['s'])) {
 	<footer>
 		
 		<p class="bylabs">A <a href="http://gvsu.edu/library/labs"><abbr title="Grand Valley State University">GVSU</abbr> Library Labs</a> Joint, inspired by <a href="http://unsuck-it.com">Unsuck It</a>.</p>
-		<p><small>Built by <a href="http://abbybedford.com">Abby Bedford</a>, Ala Alluhaidan, Mary Morgan, Patrick Roth, and <a href="http://matthewreidsma.com">Matthew Reidsma</a> for <a href="http://gvsu.edu/library">Grand Valley State University Libraries</a>. Licensed under the <a href="http://www.gnu.org/copyleft/gpl.html"><abbr title="GNU General Public License">GPL</abbr></a>. Source code available on <a href="https://github.com/gvsulib/unbraryit">Github</a>.</small></p>
+		<p><small>Built by <a href="http://abbybedford.com">Abby Bedford</a>, Ala Alluhaidan, Mary Morgan, Patrick Roth, and <a href="http://matthewreidsma.com">Matthew Reidsma</a> for <a href="http://gvsu.edu/library">Grand Valley State University Libraries</a>.</p>
+		<p>Licensed under the <a href="http://www.gnu.org/copyleft/gpl.html"><abbr title="GNU General Public License">GPL</abbr></a>. Source code available on <a href="https://github.com/mreidsma/unbraryit">Github</a>.</small></p>
 
 	</footer>
 
