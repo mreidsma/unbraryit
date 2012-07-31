@@ -1,17 +1,68 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 html { background: #0065A4;}
-body { background: #fff; font-family: helvetica, arial, verdana, sans-serif; width: 93%;margin:0 auto;}
+body { background: #fff; font-family: helvetica, arial, verdana, sans-serif; width: 93%;margin:0 auto;border-left: 2px solid #036; border-right: 2px solid #036;}
 header,footer,[role="main"] { padding: .6em;}
-[role="main"] { overflow: auto; padding-bottom: 8em;}
+[role="main"] { overflow: auto; padding-bottom: 11.5em;}
 a { color: #069;}
-h1 { margin-top: .5em;}
+h1 { margin-top: .5em; text-align: center;}
+h1 img { width: 20em;}
 img { max-width: 100%; }
 dl { font-size: 1.2em;}
 dl, footer, p.whoops {margin-top:1.5em;padding-top:1.5em;border-top:1 px solid #bcbcbc;}
 dt, p.whoops {font-weight: bold;font-size:1.3em;}
-dd {padding-left:0;margin:0;}
-input[type="submit"] { display: block; text-align: center; width: 11em; margin: .8em auto;}
-h3 { font-size: .9em;}
-footer { line-height: 1.3em;font-size: .8em; background: #ededed;position: relative;margin-top: -8em; height: 8em;clear:both;}
+dd {padding-left:0;margin:1em 0; line-height: 1.5em;}
+input[type="submit"] { display: block; text-align: center; width: 11em; margin: .8em auto;padding:.45em .75em;}
+.lib-form label { font-size: .9em; font-weight: bold;text-transform: none; color: #036;}
+footer { line-height: 1.5em;font-size: .8em; background: #ededed;position: relative;margin-top: -11.5em; height: 11.5em;clear:both;}
+footer p { margin-bottom: 1em;}
 .wrap { min-height: 100%;}
 
 /*Opera Fix*/
@@ -23,13 +74,17 @@ body:before {
 	margin-top:-32767px;/
 }
 
+@media screen and (min-width: 30em) {
+	.lib-form input[type="text"] { width: 80%; float: left;}
+	input[type="submit"] { width: 19%; display: inline-block; float: right;margin:0;padding:.55em .1em;	}	
+	p.whoops,dl { clear: both; border-top: 0;}
+	}
+
 @media screen and (min-width: 37.5em) {
 
 h1 { text-align: center;}
-h3 { font-size: 1.3em;}
-.lib-form input[type="text"] { width: 80%; float: left;}
-input[type="submit"] { width: 19%; display: inline-block; float: right; position: relative; bottom: .6em;}
-p.whoops,dl { clear: both; }
+h1 img { width: auto;}
+.lib-form label { font-size: 1.6em;font-weight: bold;}
 }
 
 @media screen and (min-width:62.5em) {

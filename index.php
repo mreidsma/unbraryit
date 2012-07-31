@@ -1,7 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-
 if (isset($_GET['s'])) {
 	$search=$_GET['s'];
 	$search = strtolower($search);
@@ -42,7 +40,7 @@ if (isset($_GET['s'])) {
 	<div class="wrap">
 	
 	<header>
-		<h1><img src="img/logo.png" alt="Unbrary It: Demystifying Library Jargon" /></h1>
+		<h1><img src="img/logo.png" alt="Unbrary It: Demystify Library Jargon" /></h1>
 		
 	</header>
 	
@@ -51,9 +49,9 @@ if (isset($_GET['s'])) {
 		<div class="size">
 		
 		<form class="lib-form" method="get" action="">
-		<h3>What jargon do you need un-libraried?</h3>
+		<label for="s">What jargon do you need un-libraried?</label>
 		<input type="text" name="s" <? if(isset($_GET['s'])) { echo 'value="' . $_GET["s"] . '"'; } ?>/>
-		<input type="submit" value="Unbrary It" class="lib-button-small" style="padding:.45em .75em;" />
+		<input type="submit" value="Unbrary It" class="lib-button-small" />
 		</form>
 		
 		<?php 
@@ -70,13 +68,12 @@ if (isset($_GET['s'])) {
 		} else { // no terms match that search
 			
 			echo '<p class="whoops">Wow. You&#8217;ve stumped us.</p>';
-			echo '<p>We&#8217;ll go ask a librarian and get a definition up soon.</p>';
+			echo '<p style="margin:1em 0;">We&#8217;ll go ask a librarian and get a definition up soon.</p>';
 			
-			$data = $_GET['s'];
+			$data = array($_GET['s']);
 			if (!$DataFile = fopen("notfound.csv", "a")) {echo "Failure: cannot open file"; die;};
-			if (!fwrite($DataFile, $data)) {echo "Failure: cannot write to file"; die;};
+			if (!fputcsv($DataFile, $data)) {echo "Failure: cannot write to file"; die;};
 			fclose($DataFile);
-			//echo "file write successful";
 			
 		}	
 		}
