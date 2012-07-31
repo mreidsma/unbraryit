@@ -1,9 +1,11 @@
 <?php
 
 if (isset($_GET['s'])) {
+	
+	include 'url.php';
+	
 	$search=$_GET['s'];
 	$search = strtolower($search);
-	$url = 'http://spreadsheets.google.com/feeds/list/0AhDlVo4a3g1hdFBYMzF1azV2M0lkWUZDeHVMV3dFQlE/od6/public/values?alt=json';
 	$file= file_get_contents($url);
 	$json = json_decode($file);
 	$rows = $json->{'feed'}->{'entry'};
