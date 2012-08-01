@@ -7,7 +7,7 @@ if (isset($_GET['s'])) {
 	$search = $_GET['s'];
 	$search = trim($search,"\x22\x27"); // Trim quotes ad single quotes from around phrases
 	$search = str_replace('"', "", $search); // Remove all double quotes
-	$search = strtolower($search), ;
+	$search = strtolower($search);
 	$file = file_get_contents($url);
 	$json = json_decode($file);
 	$rows = $json->{'feed'}->{'entry'};
