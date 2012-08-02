@@ -61,9 +61,12 @@ dt, p.whoops {font-weight: bold;font-size:1.3em;}
 dd {padding-left:0;margin:1em 0; line-height: 1.5em;}
 input[type="submit"] { display: block; text-align: center; width: 11em; margin: .8em auto;padding:.45em .75em;}
 .lib-form label { font-size: .9em; font-weight: bold;text-transform: none; color: #036;}
-footer { line-height: 1.5em;font-size: .8em; background: #ededed;position: relative;margin-top: -11.5em; height: 11.5em;clear:both;}
+footer { line-height: 1.5em;font-size: .8em; background: #ededed;position: relative;margin-top: -9.5em; height: 9.5em;clear:both;}
 footer p { margin-bottom: 1em;}
+p.twitter a { display: inline-block; height: 2.5em; padding-left: 2.5em; padding-top: .4em; background: transparent url(../img/twitter.png) top left no-repeat; }
 .wrap { min-height: 100%;}
+.centered { text-align: center; }
+.stumped-button { width: 90%; margin: auto; display: block;}
 
 /*Opera Fix*/
 body:before {
@@ -85,10 +88,10 @@ body:before {
 h1 { text-align: center;}
 h1 img { width: auto;}
 .lib-form label { font-size: 1.6em;font-weight: bold;}
+p.twitter { float: right; margin-right: 1em;}
 }
 
 @media screen and (min-width:62.5em) {
 [role="main"],header { width: 58em; margin: auto; }
-footer p { text-align: center; }
 
 }
