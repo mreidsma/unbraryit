@@ -14,9 +14,9 @@ if (isset($_GET['s'])) {
 
 	foreach($rows as $row) {
 		$term = $row->{'gsx$term'}->{'$t'};
-  		$term = strtolower($term);
+  		$lower_term = strtolower($term);
   
-  		if ( $search == $term){
+  		if ( $search == $lower_term){
   			
 			$term_match = $term;
   			$definition = $row->{'gsx$definition'}->{'$t'};
@@ -76,7 +76,10 @@ if (isset($_GET['s'])) {
 		
 		echo '<dl>
 			<dt>' . $term_match . '</dt>
-			<dd><p>' . $definition . '</p></dd>
+			<dd>
+				<p>' . $definition . '</p>
+				<p class="twitter"><a href="http://twitter.com/?status=' . urlencode($term) . '%3A%20http%3A%2F%2Funbraryit.com%2F%3Fs%3D' . $search . '%20%40unbraryit">Share this on Twitter</a></p>
+			</dd>
 		</dl>';
 		
 		} else { // no terms match that search
