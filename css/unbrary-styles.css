@@ -47,6 +47,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+strong { font-weight: bold; }
 html { background: #0065A4;}
 body { background: #fff; font-family: helvetica, arial, verdana, sans-serif; width: 93%;margin:0 auto;border-left: 2px solid #036; border-right: 2px solid #036;}
 header,footer,[role="main"] { padding: .6em;}
