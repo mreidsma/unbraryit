@@ -139,8 +139,10 @@ if(isset($_POST['addnew'])) {
 		echo '<dl>
 			<dt>' . $term_match . '</dt>
 			<dd>
-				<p>' . $definition . '</p>
-			</dd>
+				<p>' . $definition . '</p>';
+				// Twitter strips + and encoded forms from URLs - not sure how to pass them to Twitter
+				// <p class="twitter"><a href="http://twitter.com/?status=' . urlencode($term_match) . '%3A%20http%3A%2F%2Funbraryit.com%2F%3Fs%3D' . urlencode($search) . '%20%40unbraryit">Share this on Twitter</a></p>
+		echo '	</dd>
 		</dl>';
 		
 		} else { // no terms match that search
