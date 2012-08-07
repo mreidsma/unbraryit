@@ -5,6 +5,7 @@ if(isset($_GET['s'])) {
 	include 'url.php';
 	
 	$search = $_GET['s'];
+	$search = str_replace('_', " ", $search); // Convert underscores for tweet shares
 	$search = trim($search,"\x22\x27"); // Trim quotes ad single quotes from around phrases
 	$search = str_replace('"', "", $search); // Remove all double quotes
 	$search = strtolower($search);
@@ -135,14 +136,13 @@ if(isset($_POST['addnew'])) {
 		if(isset($_GET['s'])) {
 		
 		if((isset($term_match)) && (isset($definition)) && ($definition != "")) { // We've done a search
-		
+		$new_url = str_replace(' ', "_", $search);
 		echo '<dl>
 			<dt>' . $term_match . '</dt>
 			<dd>
-				<p>' . $definition . '</p>';
-				// Twitter strips + and encoded forms from URLs - not sure how to pass them to Twitter
-				// <p class="twitter"><a href="http://twitter.com/?status=' . urlencode($term_match) . '%3A%20http%3A%2F%2Funbraryit.com%2F%3Fs%3D' . urlencode($search) . '%20%40unbraryit">Share this on Twitter</a></p>
-		echo '	</dd>
+				<p>' . $definition . '</p>
+				<p class="twitter"><a href="http://twitter.com/?status=' . urlencode($term_match) . '%3A%20http%3A%2F%2Funbraryit.com%2F%3Fs%3D' . $new_url . '%20%40unbraryit">Share this on Twitter</a></p>
+		</dd>
 		</dl>';
 		
 		} else { // no terms match that search
